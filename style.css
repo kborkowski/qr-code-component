@@ -1,23 +1,23 @@
 :root {
---white: hsl(0, 0%, 100%);
---slate-300: hsl(212, 45%, 89%);
---slate-500: hsl(220, 15%, 55%);
---slate-900: hsl(218, 44%, 22%);
+    --white: hsl(0, 0%, 100%);
+    --slate-300: hsl(212, 45%, 89%);
+    --slate-500: hsl(220, 15%, 55%);
+    --slate-900: hsl(218, 44%, 22%);
 
---space-200: 16px;
---space-300: 24px;
---space-500: 40px;
+    --space-200: 16px;
+    --space-300: 24px;
+    --space-500: 40px;
 
---radius-lg: 20px;
---radius-sm: 10px;
+    --radius-lg: 20px;
+    --radius-sm: 10px;
 
---family-sans: "Outfit", sans-serif;
---text-preset-1: 22px;
---text-preset-2: 15px;
---line-preset-1: 1.2;
---line-preset-2: 1.4;
---letter-preset-1:0;
---letter-preset-2:0.2px;
+    --family-sans: "Outfit", sans-serif;
+    --text-preset-1: 22px;
+    --text-preset-2: 15px;
+    --line-preset-1: 1.2;
+    --line-preset-2: 1.4;
+    --letter-preset-1: 0;
+    --letter-preset-2: 0.2px;
 
 
 }
@@ -31,7 +31,7 @@
 
 body {
     background-color: var(--slate-300);
-    color:var(--slate-500);
+    color: var(--slate-500);
     font-family: var(--family-sans);
     font-optical-sizing: auto;
     font-weight: 400;
@@ -39,30 +39,62 @@ body {
     font-size: var(--text-preset-2);
     line-height: var(--line-preset-2);
     letter-spacing: var(--letter-preset-2);
-  }
+}
 
-  h2{ font-size: var(--text-preset-1);
+h2 {
+    font-size: var(--text-preset-1);
     line-height: var(--line-preset-1);
     letter-spacing: var(--letter-preset-1);
-    color:var(--slate-900);
+    color: var(--slate-900);
 
 
-  }
+}
 
-  img,picture {
+img,
+picture {
     max-width: 100%;
-    display:block;
-  }
+    display: block;
+}
 
-  
-.flow > * + * {
+
+.flow>*+* {
     margin-block-start: var(--flow-space, 1em);
-  }
-  
+}
+
 .challenge-wrapper {
     --max-child-width: var(--max-width, 320px);
     display: grid;
     place-items: center;
     min-height: 100vh;
-    padding: var(--space-300) max(var(--space-300,calc(50% - var(--max-child-width)/2)));
- }
+    padding: var(--space-300) max(var(--space-300, calc(50% - var(--max-child-width)/2)));
+}
+
+.card {
+    --flow-space: var(--space-300);
+    background-color: var(--white);
+    border-radius: var(--radius-lg);
+    padding: var(--space-200) var(--space-200) var(--space-500);
+    box-shadow: 0 25px 25px hsl(from black h s l / 0.0477);
+}
+
+.card__image {
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    aspect-ratio: 1/1;
+
+    img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+
+    }
+}
+
+.card__content {
+    text-align: center;
+    padding-inline: var(--space-200) ;
+    
+    > * {
+        --flow-space: var(--space-200);
+    }
+}
