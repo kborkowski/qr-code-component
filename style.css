@@ -22,10 +22,33 @@
 
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 
 body {
+    background-color: var(--slate-300);
+    color:var(--slate-500);
     font-family: var(--family-sans);
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+    font-size: var(--text-preset-2);
+    line-height: var(--line-preset-2);
+    letter-spacing: var(--letter-preset-2);
+  }
+
+  h2{ font-size: var(--text-preset-1);
+    line-height: var(--line-preset-1);
+    letter-spacing: var(--letter-preset-1);
+    color:var(--slate-900);
+
+
+  }
+
+  img,picture {
+    max-width: 100%; display:block;
   }
