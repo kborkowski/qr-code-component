@@ -64,7 +64,8 @@ picture {
     display: grid;
     place-items: center;
     min-height: 100vh;
-    padding: var(--space-300) max(var(--space-300, calc(50% - var(--max-child-width)/2)));
+    padding: var(--space-300) 
+            max(var(--space-300), calc(50% - var(--max-child-width)/2));
 }
 
 .card {
