@@ -50,5 +50,19 @@ body {
   }
 
   img,picture {
-    max-width: 100%; display:block;
+    max-width: 100%;
+    display:block;
   }
+
+  
+.flow > * + * {
+    margin-block-start: var(--flow-space, 1em);
+  }
+  
+.challenge-wrapper {
+    --max-child-width: var(--max-width, 320px);
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    padding: var(--space-300) max(var(--space-300,calc(50% - var(--max-child-width)/2)));
+ }
